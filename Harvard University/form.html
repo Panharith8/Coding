@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Form</title>
+        <link rel="stylesheet" href="external.css">
+    </head>
+    <body>
+        <form>
+            <div>
+                <input type="text" placeholder="Full Name" name="fullName"/>
+                <input type="submit" placeholder="Submit" name="submit"/>
+            </div>
+            <div>
+                <input type="text" placeholder="Passwords" name="passWord"/>
+            </div>
+            <div>
+                What color do you like?
+
+            </div>
+            <div>
+                <input type="radio" name="color" value="red">Red
+                <input type="radio" name="color" value="red">Blue
+                <input type="radio" name="color" value="red">Yello
+            </div>
+            
+            <div>
+                <input name="country" list="countries" placeholder="Country">
+                <datalist id="countries">
+                    <option value="Cambodia"></option>
+                    <option value="Thai"></option>
+                    <option value="Vietname"></option>
+                </datalist> 
+            </div>
+
+            <h1>
+                Size
+            </h1>
+            <h2 id="foo">External</h2>
+            <h3 class="abc">css class</h3>
+        </form>
+    </body>
+</html>

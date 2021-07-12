@@ -1,0 +1,74 @@
+<html>
+    <head></head>
+    <body>
+        <div><center>Function and Event Onclick</center></div>
+        <div><input id="num1" type="number" > 
+            <select id="opt">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+             <input id="num2" type="number" > =
+                <span id="result"></span>
+             <button onclick="myFunction()">Caltulate</button>
+        </div>
+
+
+
+        <div><center>Function and Event Onchange</center></div>
+        <div><input  id="number1" type="number" onchange="Cal()"> 
+            <select id="options" onchange="Cal()">
+                <option value="+">+</option>
+                <option value="-">-</option>
+                <option value="*">*</option>
+                <option value="/">/</option>
+            </select>
+             <input id="number2" type="number" onchange="Cal()"> =
+                <span id="result1"></span>        
+        </div>
+
+
+
+        <script>
+           //caltulator function
+            
+            function Cal() 
+            {   var n1,n2,o,r;
+                n1=document.getElementById("number1").value;
+                n2=document.getElementById("number2").value;
+                o=document.getElementById("options").value;
+                n1=parseInt(n1)
+                n2=parseInt(n2)
+
+                switch(o)
+                {
+                    case "+":
+                    r=n1+n2;                 
+                    break;
+
+                    case  "-":
+                    r=n1-n2;  
+                    break;
+                    
+                    case "*":
+                    r=n1*n2;   
+                    break;
+                    
+                    case "/":
+                    r=n1/n2;    
+                    break;
+                }
+                if(isNaN(n1)==false && isNaN(n2)==false){document.getElementById("result1").innerHTML=r;}
+                else if (isNaN(n1)==true){document.getElementById("result1").innerHTML="please input number1";}
+                else if (isNaN(n2)==true){document.getElementById("result1").innerHTML="please input number2";}
+
+
+                
+                
+            }
+        </script>
+
+    </body>
+   
+</html>
